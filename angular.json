@@ -10,6 +10,18 @@
           "style": "sass"
         }
       },
+      "i18n": {
+        "locales": {
+          "zh-Hant": {
+            "translation": "src/locale/messages.zh-Hant.xlf",
+            "baseHref": ""
+          },
+          "ja-JP": {
+            "translation": "src/locale/messages.ja-JP.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,11 +37,14 @@
             "inlineStyleLanguage": "sass",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.xlf",
+                "input": "src/locale",
+                "output": "locale"
+              }
             ],
-            "styles": [
-              "src/styles.sass"
-            ],
+            "styles": ["src/styles.sass"],
             "scripts": []
           },
           "configurations": {
@@ -91,13 +106,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "sass",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.sass"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.sass"],
             "scripts": []
           }
         }
